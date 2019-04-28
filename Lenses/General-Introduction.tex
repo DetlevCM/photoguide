@@ -1,0 +1,130 @@
+\section{General Introduction to Lenses}
+\label{sec:General-Introdcution-Lenses}
+
+The ability to change lenses is one of the most defining features of an \gls{SLR} camera. Besides \gls{rangefinder} cameras, this feature is further found only in micro four-thirds cameras.
+\\
+\\
+When you begin, buying the right lens for your photography can seem like a daunting task. Similarly, selecting the right lens or lenses to take along can seem like a tricky problem, because we cannot carry more than a few easily. Every time we go out to photograph something we need to compromise and decide which lens forms the ideal tool for what we aim to photograph. A starting point is to understand the types of lenses available to photographers today, what their uses are and how they affect the resulting image.
+
+\subsection{Focal Length instead of Zoom Factor}
+
+First let me introduce you to the appropriate terminology with respect to lenses. On compact cameras, we got used to reading statements such as 10x zoom, which are meaningless, on compacts as well as \glspl{SLR}.
+\\
+18-55mm is about 3x zoom, as is 70-200mm.
+\\
+However, 18-200mm would be an 11x zoom.
+\\
+Can you spot the problem?
+\\
+\\
+\gls{SLR} lenses are described using their \glspl{focallength} only, which is a property of the lens and may hence be used to identify it uniquely when including its \gls{aperture}.
+
+\subsection{Focal Length, Field of View and Sensor Size}
+
+The conventions of grouping lenses into categories only applies to a \gls{fullframesensor}, or rather a \gls{sensor} with the same physical size as a slide of film. As most \glspl{SLR} have smaller \glspl{sensor}, the viewing angle changes to that equivalent to a different \gls{focallength} on \gls{fullframe} while the \gls{focallength} of the lens stays the same, as it is a property of the lens.
+\\
+\\
+Take a look at the drawing in figure \ref{fig:Sensor-Size}, which is not quite to scale, but close in terms of relative \gls{sensor} sizes.
+\\
+The dimensions of a \gls{fullframesensor} are $36mm \times 24mm$, while it is $\approx 27.9mm \times 18.6mm$ for \gls{APS-H} and $\approx 22.3mm \times 14.9mm$ for \gls{APS-C} for Canon. While the size of \glspl{fullframesensor} is defined by old wet film, \gls{crop} formats are specified by the manufacturer.
+\\
+The size of the sensor defines how much of the \gls{imagecircle} thrown by the lens is actually visible and recorded, hence a smaller \gls{sensor} crops out a part of the whole image.
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=0.80\textwidth]{Images/Sensor-Size/Sensor-Size.png}
+	\caption{Comparison of sensor sizes, yellow = \gls{FF}, orange = \gls{APS-H}, red = \gls{APS-C}}
+	\label{fig:Sensor-Size}
+\end{figure}
+
+Confused? I shall try a simple example.
+\\
+A 50mm lens is a 50mm lens. But on a Canon \gls{APS-C} \gls{sensor}, which is a 1.6 \gls{crop}, it will have the same viewing angle as an 80mm lens on a \gls{fullframe} camera. It remains a 50mm lens, but you only see a part of the image it throws.
+\\
+\\
+Have a look at the image in figure \ref{fig:IMG_8567}. It was shot with a 24mm \gls{zoom} lens on \gls{fullframe}. The image in figure \ref{fig:Sensor-Size-On-Photo} shows the \gls{sensor} sizes overlayed and the resulting field of view for a 24mm lens on different sensors.
+
+\begin{figure}[htb]
+\centering
+\begin{minipage}{.4\textwidth}
+	\centering
+		\includegraphics[width=0.98\textwidth]{Images/Sensor-Size/IMG_8567.jpg}
+	\caption{Beverly Minster}
+	\label{fig:IMG_8567}
+\end{minipage}
+\begin{minipage}{.4\textwidth}
+	\centering
+		\includegraphics[width=0.98\textwidth]{Images/Sensor-Size/Sensor-Size-On-Photo.jpg}
+	\caption{sensor overlay}
+	\label{fig:Sensor-Size-On-Photo}
+\end{minipage}
+\caption*{Comparison of sensor sizes, yellow = \gls{FF}, orange = \gls{APS-H}, red = \gls{APS-C}}
+\end{figure}
+
+The main reason for the use of smaller \glspl{sensor} is cost. A \gls{fullframesensor} is several hundred Euros more expensive to make than a smaller \gls{APS-C} \gls{sensor}.
+\\
+\\
+Broadly, lenses fall into four categories, which can be commonly grouped as follows:
+
+%% Spacing http://crab.rutgers.edu/~karel/latex/class5/class5.html
+\begin{table}[htb]
+	\centering
+		\begin{tabular}{|rcc|}
+			\hline
+			Type of Lens & On a Full Frame Sensor & On a 1.6 Crop Sensor \\
+			\hline
+			Wide Angle   & $<35mm$ & $<24mm$ \\
+			Standard     & $\quad 50mm$ & $\approx 30mm$ \\
+			Tele         & $>70mm$ & $>50mm$ \\
+			Super-Tele   & $>200/300mm$ & $>200mm$ \\
+			\hline
+		\end{tabular}
+	\caption{Lens Classifications}
+	\label{tab:LensClassifications}
+\end{table}
+
+A standard \gls{zoom} lens covers the standard \gls{focallength}, plus ``some extra'' on either side. For example, a 24-70mm lens is considered a standard \gls{zoom} on \gls{fullframe}. For a camera with a smaller \gls{sensor}, one needs to work out the \gls{focallength} required, by dividing through the ``\gls{cropfactor}'' of the smaller \gls{sensor} to obtain equivalents with respect to the viewing angle.
+\\
+In the case of a Canon \gls{SLR}, with a \gls{crop} of 1.6, a standard \gls{zoom} would be either 17-50mm or 18-55mm, where the kit supplied kit lens generally covers 18-55mm.
+\\
+\\
+Three other ``speciality lenses'' also exist, namely fisheye, tilt-shift and macro, where the latter is generally a tele lens with the ability to focus on close objects, hence a lens design with a small \gls{minimumfocussingdistance}.
+
+
+\subsection{Sensor Sizes and Lens Mounts}
+
+Something to pay attention to, is what the lenses are designed for. Canon has an \gls{EF-S} (\gls{cropsensor}) line-up, which is cheaper, and an \gls{EF} line-up that works on a \glspl{fullframesensor}. The key difference between both designs is the image circle thrown by the lens. An \gls{EF} lens will work on a \gls{crop} camera and \gls{fullframe} camera, but an \gls{EF-S} lens will not fit onto a \gls{fullframe}, \gls{EF} mount. While an \gls{EF-S} lens can be made to fit onto a \gls{fullframe} camera, please do NOT do this, as it will also protrude further into the camera at some \glspl{focallength}, which risks a collision between the mirror and lens, which would lead to expensive damage.
+\\
+\\
+Additionally, with third party manufacturers, lenses will generally be an \gls{EF} mount, but some only throw an \gls{imagecircle} appropriate for \gls{APS-C}.
+
+\subsection{Field of View}
+\label{subsec:Field-of-View}
+
+Before I go into details as to what you can expect of a certain lens type in section \ref{sec:Introduction-Types-Lenses}, please consider the sketch under figure \ref{fig:Field-of-view} as a rough description of the field of view covered by different lenses. The black box symbolizes the camera and the pink ``x'' denotes a potential subject in the photograph.
+
+\begin{figure}[htb]
+	\centering
+		\includegraphics[width=0.98\textwidth]{Images/Lenses/Field-of-view.PNG}
+	\caption{yellow = wide angle, red = standard, blue = tele}
+	\label{fig:Field-of-view}
+\end{figure}
+
+
+\subsection{Lens Hoods and Lens Flare}
+
+Two aspects of lenses you should be aware of, are lens hoods and lens flare.
+\\
+\\
+Lens flare is caused by internal reflections in the lens. Whenever you have a light source inside the picture, there is a chance of lens flare occuring in the image. This can be used artistically, so it is not always undesirable, however in the majority of photographs is is undesirable.
+\\
+It is a good recommendation to check your images for lens flare, whenever you shoot images with (direct) light sources in them, or just outside of the image frame.
+\\
+Filters often make lens flare worse, so they are not a solution. Lens flare is often worse on wide angle lenses than on tele lenses, however both can be equally susceptible depending on the quality of the lens.
+\\
+\\
+A solution to minimizing lens flare, is to use a lens hood. Due to the nature of the field of view, explained in Section \ref{subsec:Field-of-View}, lens hoods are more effective on tele lenses than on wide-angle lenses.
+\\
+Third party manufacturers will often supply a lens hood with most of their lenses, while Canon only supplies it ``included in the price'' with their L-lenses lineup. Whether buying a lens hood for other Canon lenses is worth it, is entirely your decision, especially as the prices charged for the them are rather high.
+\\
+Because a lens hood reduces stray light, it can also help with contrast. Additionally, a lens hood offers some protection should you bump into things by accident.

@@ -1,0 +1,159 @@
+\section{Shooting RAW}
+\label{sec:shooting-RAW}
+
+\subsection{RAW vs. JPEG}
+
+I have told you to shoot \gls{RAW}, so you must wonder what the difference between \gls{RAW} and \gls{JPEG} is, especially considering that I have told you to shoot \gls{RAW} only.
+\\
+The easy way is to think of \gls{RAW} as the most unprocessed and most complete retention of data collected by the \gls{sensor}. Hence it is not an image in itself, but sensor data, a record of the information captured by the camera.
+\\
+If you are curious about details, read on, otherwise, skip to the end of this section, however, I recommend that you do read on.
+
+
+\subsection{Camera Sensors versus the Human Eye - Dynamic Range}
+\label{subsec:Camera-Sensor-Human-Eye}
+
+The human eye sees light intensity logarithmically, while the \gls{sensor} sees it linearly.
+\\
+To put some random number to it as an example, assuming that human vision is represented by the logarithm of the brightness with base 10, we could have:
+
+\begin{enumerate}
+	\item A brightness of say 0 for absolute black.
+	\item A brightness of say 100 in a dark shadow.
+	\item A brightness from 1000 to 10000 in a nice scene.
+	\item A brightness of 10000 to 100000 for lamps and the sun (light sources).
+\end{enumerate}
+
+The human eye would read these as 2 for shadow, 3 to 4 for scenes, 5 to 6 for light sources. Hence we would have a range of about 6 arbitrary units for the human eye.
+\\
+In contrast, the camera would see this as 0 to 100000, a range of 1 million steps, which for technical reasons cannot be recorded.
+\\
+\\
+Figure \ref{fig:Log-vs-linear} shows the plot of $y=x$ and $y=log(x)$ for $x=0 \mbox{ to }100$. 
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=0.80\textwidth]{Images/Log-vs-linear/Log-vs-linear.png}
+	\caption{log compared to linear}
+	\label{fig:Log-vs-linear}
+\end{figure}
+
+
+Canon's \gls{DPP} which is supplied with every Canon \gls{SLR}, has a ``linear'' checkbox, which allows you to reproduce the image the way it is seen by the sensor. This is shown in figure \ref{fig:What-SLR-Sees}, while the same scene as experienced by a human viewer is shown in figure \ref{fig:What-We-See}.
+
+\begin{figure}[htb]
+	\centering
+		\includegraphics[width=0.98\textwidth]{Images/What-We-SLR-sees/What-SLR-Sees.jpg}
+	\caption{what a camera sensor sees}
+	\label{fig:What-SLR-Sees}
+\end{figure}
+
+\begin{figure}[htb]
+	\centering
+		\includegraphics[width=0.98\textwidth]{Images/What-We-SLR-sees/What-We-See.jpg}
+	\caption{what we see}
+	\label{fig:What-We-See}
+\end{figure}
+
+If you have ever photographed a scene that had a light source in it, it will show a halo around the light source. This halo is light (or specifically electric current) spilling ``out'' of the photodiodes affecting neighbouring diodes. The halo is an excess signal created by the light source, in a way similar to water that spills out of an overfilled bucket and soaks the floor surrounding the bucket.
+\\
+\\
+This is the main reason why it is difficult to replicate a scene the way we see it and why techniques have been developed to overcome this limitation of the recording medium, specifically \gls{HDR}. It must however also be said, that advances are made towards \glspl{sensor} that can capture the same dynamic range as human eyes.
+\\
+\\
+A term that should be very important to the aspiring photographer is dynamic range. Dynamic range describes the spread of a scene in terms of ``\glspl{stop}''. \Glspl{stop} are a way of describing the amount of light, or rather ratio of the amounts of light. A difference of 1 stop equals the difference between twice as much or half as much light.
+\\
+The human eye covers about 18 \glspl{stop} of light, while \glspl{sensor} today will general cover around 6 to 8 \glspl{stop} at best. This means humans can see a scene where the brightest part of the scene contains $2^{18}$ times as much light as the darkest scene, that is 262144 times as much light in ``bright areas'' over ``dark areas''. In contrast, a modern camera sensor can resolve about 8 \glspl{stop} at best, which translates to 256 times as much light in the brightest part of the image when compared to the darkest scene in the image.
+\\
+Anything that is darker than 8 \glspl{stop} will lose detail and become absolute black, while anything that is brighter than 8 \glspl{stop} will become absolute white or absolute red/green/blue if one colour dominates in this part of the scene.
+\\
+Additionally, noise can reduce the amount of \glspl{stop} the sensor can resolve, as it adds a variation in the recorded data that can mask subtle chagnes.
+
+
+\subsection{Camera Sensors versus the Human Eye - Colours}
+
+Cameras record colours as a combination of red, green and blue light, the ratio between them is given in the white balance (also colour temperature) and colour tone. Colour depth of an image or a format is measured in bits per channel, for \gls{JPEG} it is 8bits per channel, for \gls{RAW} currently 14bits per channel on common \glspl{DSLR}.
+\\
+\\
+As long as the photodiodes on the \gls{sensor} are not overloaded, a higher bit depth will always result in more details with respect to brightness and hence colours. If you overload the photodiodes, even the highest resolution will not save you any detail.
+\\
+\\
+A section of the camera's \gls{sensor} contains the pattern shown in figure \ref{fig:Sensor-Pattern}.
+
+\begin{figure}[htb]
+\begin{minipage}{.5\textwidth}
+\centering
+		\includegraphics[width=0.98\textwidth]{Images/Sensor-Workings/Sensor-Pattern.png}
+	\caption{Section of a camera Sensor}
+	\label{fig:Sensor-Pattern}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\centering
+		\includegraphics[width=0.98\textwidth]{Images/Sensor-Workings/4-Pixels.png}
+	\caption{4 Pixels you See}
+	\label{fig:4-Pixels}
+\end{minipage}
+\end{figure}
+
+This type of \gls{sensor} design is why manufacturers tend to specify two very different pixel counts for their sensor. For example, Canon specifies the following for two of their \glspl{DSLR}, shown in table \ref{tab:CanonSLRPixelCounts}.
+
+\begin{table}[htb]
+	\centering
+		\begin{tabular}{|r|cc|}
+		\hline
+		Camera Type & Effective Pixels & Total Pixels \\
+		\hline
+		7D & Approx 18.0M & Approx 19.0M \\
+		5D MK II & Approx 21.1M & Approx 22.0M\\
+		\hline	
+		\end{tabular}
+	\caption{Canon SLR pixel counts}
+	\label{tab:CanonSLRPixelCounts}
+\end{table}
+
+The total pixel count states the number of photo diodes available on the \gls{sensor}, which needs to be larger than the number of pixels in the final image, which are created from the readings of four photo diodes combined. See figure \ref{fig:4-Pixels} for an illustration as to what information is used for a pixel, denoted by a black, numbered, box.
+\\
+For the mathematically inclined, when the number of effective pixels is given by $x \times y$, where $x$ and $y$ are the horizontal and vertical resolution respectively, then the number of total pixels is given by $\left( x +1 \right) \times \left(y + 1 \right)$. For a 5D MK II, this would mean at least around 9500 extra pixels are required.
+\\
+\\
+While such sensor designs might seem prone to inaccurate results, algorithms have improved a lot since the first digital cameras. As a result, today's software is very good at reconstructing fine detail from the information collected by the \gls{sensor}. How sharp an image is depends mainly on the anti-aliasing filter in front of the sensor and the post processing applied to the image, no matter whether the latter is done in the camera or on a computer.
+\\
+\\
+Comparing the camera's \gls{sensor} to our eyes, the receptors on a human retina will recognize either brightness alone, resulting in a grey image if they are the only input, or coloured brigthness readings when enough light is present.
+\\
+The receptors for brightness without colour are more numerous than the receptors for colour, hence humans perceive night scenes without a lot of light to be more grey than daylight scenes.
+
+
+\subsubsection{More Details on RAW}
+
+A \gls{JPEG} can only resolve $2^{8}$ or 256 different levels of brightness for a colour, from 0 to 255. A \gls{RAW} file in contrast can resolve $2^{14}$ or 16384 levels of brightness per channel.
+\\
+Additionally, four pixels from a \gls{JPEG} require nine ``pixels'' from a \gls{RAW} file, resulting in a more detailed recording of the same data.
+\\
+\\
+Not only can one record light measurements over a greater range than in a \gls{JPEG}, but also in finer steps. Hence, what is perfect white in a \gls{JPEG} will still contain a colour tint in \gls{RAW}. What is perfect black in a \gls{JPEG} will contain detail in a \gls{RAW}.
+\\
+\\
+The \gls{RAW} file format can allow you to save an image if you make minor mistakes, but please do not use this as an excuse for being sloppy when shooting photographs. While one can often save a slightly off image, shooting it the way one intended in the first place is generally the better choice as the final result will always look better. However, there are even more reasons to shoot in \gls{RAW} instead of \gls{JPEG}. A \gls{JPEG} image is created using lossy compression, hence data is discarded (and lost forever) when compressing the raw \gls{sensor} data and creating the image file. Any changes to the image, such as changes to sharpness, contrast, saturation are difficult or impossible to reverse.
+\\
+\\
+A \gls{RAW} file allows you, the photographer, to take full control over these settings. You decide how much sharpening you want, how much you want to increase the saturation, how much you want to change the contrast. Of course if you feel lazy and like the result, you can apply some standard automatic settings and be done with it, but should you ever decide to re-interpret the image in the future, you will never regret shooting in \gls{RAW}. Shooting in \gls{RAW} is similar to buying the ingredients compared to buying a finished ready meal. Of course this requires you enjoy cooking to enjoy the meal, but you have full control over the result. Photography is similar, editing a photograph is very much a part of photography. Hence if you are serious about getting into photography, you should consider learning at least the basics of editing and accepting them as an essential ingredient in the final result.
+
+
+\subsection{Sharpness and Saturation in RAW}
+
+From compact cameras, many people are used to severely over sharpened and oversaturated images. When you see your first \gls{RAW} file, it may seem flat (dull colours) and blurry because it has not been post-processed. Try not to resemble a compact camera when using a \gls{DSLR}, because it is not a compact camera.
+\\
+\\
+The flat, desaturated look has been implemented by design, to ensure that more detail is retained. It might seem counterintuitive at first, but a ``flat image'', hence one that has not been saturated severly will contain more colour information than a heavily saturated image, in which highlights can be lost and colour changes contains steep gradients.
+\\
+With respect to sharpness, \gls{RAW} sensor data, as shown in figure \ref{fig:4-Pixels} needs to be interpreted to construct pixels, hence showing you the initial output will result in a slightly less sharp image. A bit of sharpening is easily applied with any post-processing software, with different algorithms implemented by different software.
+\\
+\\
+Please do not make the mistake of thinking compact cameras capture the scene differently, they do not, they just post process the sensor data in camera. When shooting \gls{RAW} images and post processing them yourself, you retain full control over how the image looks. As a result, able to obtain a natural look from your images and can avoid the artefacts created by excessive sharpening or the unatural colours due to excess saturation.
+\\
+\\
+However, that does not mean that oversaturated or over sharpened images such as often produced by compact cameras cannot have their place in photography as an art.
+\\
+\\
+Please note though, should you aspire to become a \gls{photojournalist}, you should edit your images as little as possible or might even be required not to edit them at all.

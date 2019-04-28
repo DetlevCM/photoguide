@@ -1,0 +1,120 @@
+
+
+\documentclass[BCOR1cm,headsepline,footsepline,]{scrbook}
+
+
+\usepackage[ansinew]{inputenc}
+
+
+\usepackage{graphicx} 
+%% http://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions
+
+%% Euro Symbol
+%% http://en.wikibooks.org/wiki/LaTeX/Formatting#Euro_.E2.82.AC_currency_symbol
+\usepackage[official]{eurosym}
+
+% For lists
+% http://texblog.wordpress.com/2008/10/16/lists-enumerate-itemize-description-and-how-to-change-them/
+\usepackage{enumerate}
+
+\usepackage{caption}
+
+% http://en.wikibooks.org/wiki/LaTeX/Hyperlinks#Problems_with_Links_and_Equations
+%for links - https://secure.wikimedia.org/wikibooks/en/wiki/LaTeX/Hyperlinks
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=false,
+plainpages=false,
+pdfstartview={FitH}, 
+pdfauthor={Detlev Conrad Mielczarek},     % author
+pdfsubject={A Basic Introduction to Photography},   % subject of the document
+pdfcreator={Detlev Conrad Mielczarek}
+}
+
+\urlstyle{same}
+
+\usepackage[all]{hypcap}
+
+%% Glossary http://en.wikibooks.org/wiki/LaTeX/Glossary
+\usepackage[toc]{glossaries}
+
+
+
+\input{Glossary}
+
+\makeindex
+\makeglossaries
+
+
+\begin{document}
+\setlength{\parindent}{0in} 
+
+\input{version}
+
+
+\title{A Basic Introduction to Photography \\ \vspace{5 mm} \normalsize Version \versionnumber}
+\author{Detlev Conrad Mielczarek}
+
+\uppertitleback{
+\input{license}
+}
+%% http://www.clickandcopyright.com/copyright-resources/copyright-symbol-usage.aspx
+\lowertitleback{
+\begin{center}
+Copyright \copyright\ 2011 - Detlev Conrad Mielczarek. All Rights Reserved.
+\end{center}
+}
+\pagenumbering{roman}
+
+
+\maketitle 	
+
+\tableofcontents
+%% http://www.latex-community.org/forum/viewtopic.php?f=19&t=7508&start=0
+\addcontentsline{toc}{chapter}{Table of Contents}
+%\listoftables
+%\listoffigures
+
+
+\input{Initial-Words}
+\addcontentsline{toc}{chapter}{Initial Words}
+
+\mainmatter
+
+
+\input{The-basics-of-using-a-DSLR}
+
+\input{Exposure-Aperture-ISO}
+\input{Autofocus-and-Metering}
+
+\input{Lenses}
+\input{Composition-Basics}
+
+\input{Computer-based-Techniques}
+
+\input{FileManagement}
+
+\input{A-few-words-on-editing-photographs}
+\input{Colour-Management}
+
+%\part{Details for the Curious}
+
+%\input{How-Cameras-See}
+
+%%\input{Suggested-Links}
+
+
+\input{Accessories}
+
+\backmatter
+
+\printglossaries
+
+\input{Thanks}
+
+\clearpage
+
+\input{Closing-Donation}
+
+
+\end{document}
