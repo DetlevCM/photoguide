@@ -25,3 +25,7 @@
 # being a bit mean, photos too for now
 *.jpg
 *.png
+*.PNG
+*.JPG
+*.jpeg
+*.JPEG
