@@ -12,4 +12,4 @@ The LaTeX Source is made available under the following license:
 This work is currently licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
 http://creativecommons.org/licenses/by-nc-nd/4.0/
 
-Please contact me if you would like to use parts of the document.
+Please contact me if you would like to use extracts and/or modify parts of the document to create derivative works.
