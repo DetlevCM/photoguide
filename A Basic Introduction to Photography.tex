@@ -2,9 +2,16 @@
 
 \documentclass[BCOR1cm,headsepline,footsepline,]{scrbook}
 
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage{amsmath}
 
-\usepackage[ansinew]{inputenc}
+%% fighting bad boxes
+\usepackage[activate={true,nocompatibility}]{microtype}
 
+
+\usepackage[english]{babel}
 
 \usepackage{graphicx} 
 %% http://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions
@@ -19,16 +26,24 @@
 
 \usepackage{caption}
 
+\usepackage{xcolor}
+
 % http://en.wikibooks.org/wiki/LaTeX/Hyperlinks#Problems_with_Links_and_Equations
 %for links - https://secure.wikimedia.org/wikibooks/en/wiki/LaTeX/Hyperlinks
 \usepackage{hyperref}
 \hypersetup{
-colorlinks=false,
-plainpages=false,
-pdfstartview={FitH}, 
-pdfauthor={Detlev Conrad Mielczarek},     % author
-pdfsubject={A Basic Introduction to Photography},   % subject of the document
-pdfcreator={Detlev Conrad Mielczarek}
+	colorlinks=false,
+	%colorlinks=true,
+	%	hidelinks,
+	citecolor = [rgb]{0,0.5,0.1},
+	linkcolor = [rgb]{0.1,0.1,0.7},
+	urlcolor  = [rgb]{0.6,0.1,0.1},
+    plainpages=false,
+    pdfstartview={FitH}, 
+    pdfauthor={Detlev Conrad Mielczarek},     % author
+    pdfsubject={A Basic Introduction to Photography},   % subject of the document
+	pdfencoding=auto,
+    pdfcreator={Detlev Conrad Mielczarek}
 }
 
 \urlstyle{same}
