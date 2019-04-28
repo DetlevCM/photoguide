@@ -28,8 +28,7 @@ For web use, sRGB is the standard \gls{colourspace}, for printing sRGB tends to 
 \subsection{Managing Colour}
 
 \Gls{colourmanagement} just means ensuring that the applications respect the \gls{colourspace} information, and that \gls{colourspace} information is retained. It also means embedding the appropriate \gls{colourspace} into the resulting image file, so that later viewers are able to reconstruct what you see, with the colours that you saw.
-\\
-\\
+\\[\baselineskip]
 Let me give you an example. If you look at the images presented in figure \ref{fig:IMG_1664_Adobe RGB-converted} and figure \ref{fig:IMG_1664_colourspace ignored}, you might be able to detect a difference in colour, depending on the quality of your monitor. The source image was present in the Adobe RGB \gls{colourspace}, in figure \ref{fig:IMG_1664_Adobe RGB-converted} this was converted to sRGB, while in figure \ref{fig:IMG_1664_colourspace ignored} the \gls{colourspace} was ignored and the numerical values at every pixels were treated as if they were from the sRGB \gls{colourspace}.
 \\
 Because the colours are mapped slightly differently, the images look similar but not identical. Specifically, if your monitor is good at displaying blue and violet or colour accurate, you should be able to discern a more violet tint in the image, which has ignored the \gls{colourspace}, over the image in which the \gls{colourspace} was adhered to.
@@ -50,8 +49,7 @@ Because the colours are mapped slightly differently, the images look similar but
 \end{figure}
 
 While the differences are small between sRGB and Adobe RGB, other \glspl{colourspace} can have a significant impact on the resulting image. \Glspl{colourspace} based on other ``colour systems'' than RGB such as Lab CMYK can result in completely different images. You might have spotted, that the Lab CMYK colours match the contents of your printer, even though your home printer will have an RGB colour profile on your computer. This is because the \gls{colourspace} is converted along the way, which will result in images looking either very similar, or ideally identical with respect to colour.
-\\
-\\
+\\[\baselineskip]
 For your entertainment, figure \ref{fig:IMG_1664-Prophoto-RGB} shows the ProPhoto RGB \gls{colourspace} assigned to the same Adobe RGB source image. Figure \ref{fig:IMG_1664-CMYK-Agfa-Swoop-Standard} shows the colours changed to CMYK and then the Agfa Swoop Standard applied again to the same source image. While one can argue that ProPhoto RGB actually improves the colours in this specific image (but also oversaturates them), switching to CMYK and just assigning the Agfa Swoop Standard results in a colour disaster.
 \\
 Whenever you change \gls{colourspace}, make sure you explicitly convert the colours. However, you should still be aware of some things.
@@ -72,11 +70,9 @@ Whenever you change \gls{colourspace}, make sure you explicitly convert the colo
 \end{figure}
 
 While randomly assigning \glspl{colourspace} might seem like harmless playing around, switching between \glspl{colourspace} can lose you colour. Because some \glspl{colourspace} are wider, they cover colours that cannot be displayed by another \gls{colourspace}. A Specific example would be Adobe RGB compared to sRGB. Adobe RGB is significantly wider than sRGB, so switching between these \glspl{colourspace} can lead to a loss of highlight detail, especially is you went Adobe RGB to sRGB to Adobe RGB.
-\\
-\\
+\\[\baselineskip]
 If you work on images, you should generally decide between sRGB and Adobe RGB. If you do not want to think about \gls{colourmanagement}, just stick with sRGB. Nevertheless, whatever you do, ensure that \gls{colourspace} conversions, if they need to be made, are made as late and seldom as possible.
-\\
-\\
+\\[\baselineskip]
 Just in case you have not guessed it. All of the above images have been converted to sRGB for the PDF document, to ensure you can see the results even without using a colour managed application.
 
 \subsection{Colour ``Systems''}
@@ -106,8 +102,7 @@ CMYK is used for all sorts of printed media, which do not emit light themselves.
 If you have read this far, you must now wonder why the two systems. Well, thankfully the explanation is simple enough and in fact implicitly part of any physics class at school. (At least in Germany when I went to school there.)
 \\
 You should know that ``white light'' such as sunlight, can be split into its colour channels using a prism, which will give you a rainbow. Different wavelengths of light are refracted (or bent in plain English) by a different angle when entering the prism which is a medium optically denser than air. (Refraction occurs at every interface between optically transparent media with different densities.) At the same time, this setup also works the other way, hence if you ``mix'' the colours, you get white light. Red has the longest wavelength of visible light, green is somewhere in the middle, and blue has the shortest. By mixing those three channels you can thus create ``in between'' colours.
-\\
-\\
+\\[\baselineskip]
 While RGB is used with light sources, CYMK is more passive. We see objects because they reflect white light that hits them, absorbing some of it. Different surfaces reflect different wavelengths and amounts of light. Black reflects very little, and the energy absorbed is translated into heat, while white reflects most of the light hitting it. This is why dark clothes in summer are warmer than white clothes.
 \\
 To see colour, as mentioned above, we need to add or remove colour channels. While with emitting light we could add a colour channel, on reflected light, we can only remove a colour channel when reflecting light. A yellow object absorbs all light that is not yellow and reflects only yellow light. Conversely, a red object reflects red light and a blue object reflects blue light.
@@ -137,15 +132,13 @@ Calibrating your monitor will give you colour accuracy within the gamut of your 
 If you do not calibrate your monitor, your image will most likely look fine on many monitors, unless your monitor desaturates the image displayed. The human eye is surprisingly flexible at adapting to different environments, and hence will be able to see a range of colour temperatures as white. This is why calibration is only valid with hardware; your eyes would deceive you.
 \\
 Please do not try to calibrate your monitor by looking at it. If you calibrate your monitor, it must be a hardware calibration.
-\\
-\\
+\\[\baselineskip]
 In addition, even if you do not care about colour accuracy that much (although you should), a benefit of calibration on especially laptop monitors is reduced eyestrain through a warmer image.
 
 \subsection{Get a new monitor or use your current one?}
 
 A reasonably priced monitor, which covers around 94\% of the sRGB \gls{colourspace}, is the HP ZR24w, which is the monitor I use. (Or succeeding models.) However, as time progresses, more, good, low cost options will become available. If you are willing to spend more money on a monitor, the number of choices increases with the price.
-\\
-\\
+\\[\baselineskip]
 However, what if you already have a monitor and do not wish to buy a new one?
 \\
 In this case, you need to be aware what the key limitations of your monitor are. If you have calibrated it, a lower gamut monitor will result in a loss of detail in highlights and shadows, but otherwise not have any other ill effects. If you shoot mainly evenly lit landscapes with few highlight details, this is not too much of an issue, however if highlights are crucial to you, for example shooting church windows, a monitor that covers close to 100\% of at least sRGB becomes a must have. Specifically what happens on a lower gamut monitor is, that for example a piece of red stained glass at say (250,0,0) will just look like absolute red (255,0,0) without detail, when in fact it does still contain detail.
@@ -154,15 +147,12 @@ In this case, you need to be aware what the key limitations of your monitor are.
 \section{Softproofing}
 
 In the same way that colour is not intrinsically designed without a colourmap, colour rendition is also influenced by the reproduction media, be it a monitor or a print.
-\\
-\\
+\\[\baselineskip]
 Photographers who aspire to print a photo, be it on canvas, photo paper or aluminium need to obtain an impression of how the final product will look - ideally before paying for a print. The softproof enables photographers to obtain an impression of the colour rendition in the print.
-\\
-\\
+\\[\baselineskip]
 The biggest impact is the result of the ``colour source'', whether a printer uses four inks or say seven inks. Which kind of brightness the substrate, the carrier medium has etc.
 A softproof enables the user to get an idea of the final rendition and to correct for any undesired consequences of printing on a specific medium.
-\\
-\\
+\\[\baselineskip]
 However, there is one warning that needs to be given: For expensive large prints, or large columes of small prints even with the best colour management and softproofing it is advisable to print a small test print first to get an impression as to the accuracy of the softproof and the accuracy of the rendition.
 When in doubt, a test print is worth a lot more than a softproof.
 
