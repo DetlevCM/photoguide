@@ -1,0 +1,27 @@
+#
+# .gitignore
+#
+# list the files to ignore by git, i.e. temporary files
+#
+
+*.aux
+*.glg
+*.glo
+*.gls
+*.ist
+*.log
+*.out
+*.tcp
+
+# it was created in TeXnic Center, no need to keep those here though
+*.tcp
+*.tps
+
+
+# pdf files should be relases
+*.pdf
+
+
+# being a bit mean, photos too for now
+*.jpg
+*.png
