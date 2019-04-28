@@ -12,6 +12,10 @@
 *.log
 *.out
 *.tcp
+*.idx
+*.toc
+*.synctex.gz
+*.gz
 
 # it was created in TeXnic Center, no need to keep those here though
 *.tcp
